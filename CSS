@@ -1,0 +1,54 @@
+/* CSS */
+
+td {
+    width: 100px;
+    height: 100px;
+    background:pink;
+}
+
+.vertical {
+    border-left: 2px solid #4ff7d8;
+    border-right: 2px solid #4ff7d8;
+}
+
+.horizontalOne {
+    border-top: 2px solid #4ff7d8;
+    border-bottom: 2px solid #4ff7d8
+}
+
+.horizontalTwo {
+    border
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: blue;
+  }
+
+.game-field {
+    width: 134px;
+    height: 134px;
+    display: block;
+    float: left;
+    color: #EAEAEA;
+    font-size: 6.3em;
+    padding: 1px 27px;
+  }
+#head {
+    font-size: 25px;
+    padding: 15px
+  }
+
+#board {
+    display: flex;
+    width: 300px;
+    flex-wrap: wrap;
+  }
+
+  .win {
+    color: #E4572E;
+    transition: 200ms;
+  }
