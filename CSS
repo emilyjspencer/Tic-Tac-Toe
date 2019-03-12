@@ -1,5 +1,10 @@
 /* CSS */
 
+h1 {
+    font-size: 50px;
+    color: blueviolet;
+}
+
 td {
     width: 100px;
     height: 100px;
