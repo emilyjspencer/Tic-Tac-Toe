@@ -3,7 +3,15 @@
 h1 {
     font-size: 50px;
     color: blueviolet;
+   
 }
+
+table {
+    margin-top: 190px;
+    margin-left: 500px;
+
+}
+
 
 td {
     width: 100px;
@@ -21,9 +29,7 @@ td {
     border-bottom: 2px solid #4ff7d8
 }
 
-.horizontalTwo {
-    border
-}
+
 
 #game {
     display: flex;
