@@ -2,34 +2,34 @@
 <html>
 <head>
     <title>Tic Tac Toe board</title>
-    <link rel="stylesheet" type="text/css" href="tictactoeboard.css">
+    <link rel="stylesheet" type="text/css" href="tictactoeboardone.css">
 
 </head>
-<body>
-   
-    <h1>LET'S PLAY TIC TAC TOE!!!</h1>
+<body onload ="startGame()"></body>
+    <h1>Let's Play Tic Tac Toe!</h1>
+    <div id="header">This will change</div>
 
 
-<div>
-<table id="board">
+<div id="container">
+<table>
     <tr>
-        <td></td>
-        <td class="vertical"></td>
-        <td></td>
+        <td class="square" id="one" onClick="nextMove(this)"></td>
+        <td class="square" id="two" onClick="nextMove(this)"></td>
+        <td class="square" id="three" onClick="nextMove(this)"></td>
     </tr>
     <tr>
-        <td class="horizontalOne"></td>
-        <td class="vertical horizontalOne"></td>
-        <td class="horizontalOne"></td>
+        <td class="square" id="four" onClick="nextMove(this)"></td>
+        <td class="square" id="five" onClick="nextMove(this)"></td>
+        <td class="square" id="six" onClick="nextMove(this)"></td>
     </tr>
     <tr>
-        <td class="horizontalTwo"></td>
-        <td class="vertical"></td>
-        <td></td>
+        <td class="square" id="seven" onClick="nextMove(this)"></td>
+        <td class="square" id="eight" onClick="nextMove(this)"></td>
+        <td class="square" id="nine" onClick="nextMove(this)"></td>
     </tr>
 </table>
 </div>
 
-
+<script type="text/javascript" src="tictactoeboardone.js"></script>
 </body>
 </html>
