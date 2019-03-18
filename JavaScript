@@ -1,1 +1,66 @@
+function startGame() {
+    document.turn = "X";
+    document.winner = null;
+    setHeader(document.turn + " get's to start.");
+}
 
+function setHeader(msg) {
+    document.getElementById("header").innerText = msg;
+}
+
+function nextMove(square) {
+    if(document.winner != null) {
+        setHeader(document.turn + " already won")
+    } else if(square.innerText == ""){
+        square.innerText = document.turn;
+        switchTurn();
+    } else {
+      setHeader("Pick an empty square");
+    }
+}
+   
+
+
+function switchTurn() {
+    if(checkForWinner(document.turn)){
+        setHeader("Well done " + document.turn + ", you won!!!")
+        document.winner = document.turn;
+    } else if(document.turn == "X"){
+        document.turn = "O";
+        setHeader("It's " + document.turn + "'s turn.")
+    } else {
+        document.turn = "X";
+        setHeader("It's " + document.turn + "'s turn.");
+    }
+    
+}
+
+function checkForWinner(move) {
+    var result = false;
+    if(checkRow(1,2,3,move) ||
+       checkRow(4,5,6,move) ||
+       checkRow(7,8,9,move) ||
+       checkRow(1,4,7,move) ||
+       checkRow(2,5,8,move) ||
+       checkRow(3,6,9,move) ||
+       checkRow(1,5,9,move) ||
+       checkRow(3,5,7,move)) {
+           result = true;
+       }   
+        return result;
+}
+
+function checkRow(a, b, c, move){
+    var result = false;
+    if(getSquare(a) == move && getSquare(b) == move && getSquare(c) == move){
+        result = true;
+    }
+    return result;
+
+}
+
+function getSquare(number) {
+   return document.getElementById("s" + number).innerText;
+
+
+}
